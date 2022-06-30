@@ -39,7 +39,7 @@ const Home = () => {
 			<ul className="list">
 				{items.map(item=>{
 					return(
-						<li key={item.id}>{item.value}<button onClick={()=>deleteItem(item.id)}>X</button></li>
+						<li key={item.id}>{item.value}<button onClick={()=>deleteItem(item.id)}><i class="fa fa-solid fa fa-trash"></i></button></li>
 					)
 				})}
 
