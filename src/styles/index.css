@@ -9,7 +9,7 @@ input{
     width: 320px;
 }
     
-h1{
+.todos{
     color: aliceblue;
     text-decoration: gainsboro;
     font-size:175px;

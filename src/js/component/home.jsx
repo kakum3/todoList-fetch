@@ -1,4 +1,5 @@
-import React, {useState} from "react";
+import {element} from "prop-types";
+import React, {useState,useEffect} from "react";
 
 
 
@@ -6,8 +7,26 @@ import React, {useState} from "react";
 const Home = () => {
 	const[newItem, setNewItem] = useState("");
 	const[items, setItems] = useState([]);
+	useEffect(()=>{
+		fetch("https://assets.breatheco.de/apis/fake/todos/user/kakum3")
+		.then(r=>r.json())
+		.then(data=>setItems(data.map((element,i)=>({id:i,value:element.label}))))
+		
+		console.log(items)
 
-	const handleSubmit= (event)=> {
+	},[])
+	useEffect(()=>{
+		fetch("https://assets.breatheco.de/apis/fake/todos/user/kakum3",{
+			method: "PUT",
+			body: JSON.stringify(items),
+			headers: {
+			  "Content-Type": "application/json"
+			}
+		  })
+		  },[items])
+		
+	
+	  const handleSubmit= (event)=> {
 		event.preventDefault()
 		if(newItem !=("")){	
 			const addItems = {
@@ -16,6 +35,7 @@ const Home = () => {
 			}
 			setItems( [...items,addItems]);
 			setNewItem("");
+
 	    }
 	
     }
@@ -36,10 +56,11 @@ const Home = () => {
 				/>
 				<button>Add</button>
 			</form>
+			
 			<ul className="list">
 				{items.map(item=>{
 					return(
-						<li key={item.id}>{item.value}<button onClick={()=>deleteItem(item.id)}><i class="fa fa-solid fa fa-trash"></i></button></li>
+						<li key={item.id}>{item.value}<button onClick={()=>deleteItem(item.id)}><i className="fa fa-solid fa fa-trash"></i></button></li>
 					)
 				})}
 
