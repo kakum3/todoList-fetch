@@ -1,7 +1,6 @@
-.Home{
-    text-align: center;
-}
-input{
+
+
+.input{
     padding: 14px 32px 14px 16px;
     border: 2px solid lightblue;
     margin-right: 8px;
@@ -15,42 +14,7 @@ input{
     font-size:175px;
     text-align: center;
 }
-.list{
-    background: rgb(236, 239, 240);
-    color: rgb(3, 41, 77);
-    text-align: left;
-    border: 2px solid lightblue;
-    width: 70%;
-    margin-left: 150px;
 
-  
-}button{
-  padding: 16px;
-  border: none;
-  border-radius: 0p 4px 4px 0p;
-  cursor: pointer;
-  outline: none;
-  background: linear-gradient(
-    90deg,
-  rgba(17, 122, 255, 1)0%,
-    rgba(29,159,255,1)100%
-  );
-  color: white;
-  text-transform: capitalize;
-}
-li{display: flex;
-    justify-content: space-between;
-    
-    box-shadow: rgba(17, 122, 255, 1);
-    margin-top: 1px;
-    border-radius: 1px solid rgb(26, 26, 109);
-    border-top:  1px solid rgb(182, 182, 242);
-    text-align: center;
-    font-size: 15px;
-    padding: top 15px;
-    box-shadow:1px 1px blue;
-    
-}
 
 /* 
 

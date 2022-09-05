@@ -1,0 +1,48 @@
+.input1 {
+  padding: 14px 32px 14px 16px;
+  border: 2px solid lightblue;
+
+  outline: none;
+  width: 320px;
+  text-align: center;
+}
+
+button {
+  padding: 16px;
+  border: none;
+  border-radius: 0p 4px 4px 0p;
+  cursor: pointer;
+  outline: none;
+  background: linear-gradient(90deg,
+      rgba(17, 122, 255, 1)0%,
+      rgba(29, 159, 255, 1)100%);
+  color: white;
+  text-transform: capitalize;
+}
+
+#text {
+  margin-top: 5px;
+}
+
+.list-group-item {
+  background: rgb(236, 239, 240);
+  color: rgb(3, 41, 77);
+  text-align: center;
+  border: 2px solid lightblue;
+  width: 100%;
+
+}
+
+li {
+
+
+
+
+  border-radius: 1px solid rgb(26, 26, 109);
+  border-top: 1px solid rgb(182, 182, 242);
+  text-align: center;
+  font-size: 15px;
+  padding: top 15px;
+
+
+}
